@@ -7,5 +7,5 @@ output "public_subnet_az1_id" {
 }
 
 output "website_url" {
-  value = aws_subnet.public_subnet_az1.id
+  value = join ("", ["https://", var.record_name, ".", var.domain_name])
 }
